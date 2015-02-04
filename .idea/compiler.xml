@@ -24,6 +24,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="StackKata" />
+        <module name="TddWithJava" />
         <module name="untitled" />
       </profile>
     </annotationProcessing>
