@@ -21,7 +21,8 @@ public class Loan {
 
     public void GenerateSchedule() {
         for(int i=1;i<=term;i++)
-            PaymentSchedule.add(new Quota());
+            PaymentSchedule.add(new Quota(){{Capital = capital/term;
+                RateAmount =(capital/term)*rate;}});
     }
 
     public double TotalRate(){return capital*rate;};

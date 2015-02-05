@@ -59,5 +59,22 @@ public void setup(){
         assertEquals(3000.00, loan.TotalCapital(),0.001);
         assertEquals(12, loan.PaymentSchedule.size());
     }
+
+    @Test
+    public void GetLoan_GivenACreditRequestFor1000Usd10Months1Rate_ThenShouldGet12QuotasWithRightComposition(){
+        //Arrange
+        loanRequest.capital = 1000.00;
+        loanRequest.rate = 0.01;
+        loanRequest.term = 10;
+        // Act
+        Loan loan = loanSimulator.GetLoan(loanRequest);
+        // Assertion
+        assertEquals(10, loan.PaymentSchedule.size());
+        for(Quota quota:loan.PaymentSchedule){
+            assertEquals("Quota Capital should be" ,100.00,quota.Capital,0.0001);
+            assertEquals("Quota Rate Amount should be", 1.00,quota.RateAmount,0.0001);
+            assertEquals("Quota Total should be" ,101.00, quota.getTotal(),0.0001);
+        }
+    }
     }
 
