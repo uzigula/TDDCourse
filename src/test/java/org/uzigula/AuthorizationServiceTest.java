@@ -1,6 +1,8 @@
 package org.uzigula;
 
+import junit.framework.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -9,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
@@ -23,6 +26,7 @@ public class AuthorizationServiceTest {
 
     @Rule
     public ExpectedException expectedEx = ExpectedException.none();
+
     private IUserStore userStoreStub;
     private AuthorizationService auth;
     private IEmailService emailServiceMock;
@@ -101,7 +105,8 @@ public class AuthorizationServiceTest {
         auth.GetResetPasswordLink("jperez@acme.com");
     }
 
-   @Test
+   @Ignore
+    @Test
     public void ValidateAuthorization(){
 
        when(userStoreStub.getApplicationsFor(anyString())).thenReturn(getApplicationsList()); // seteando el resultado
@@ -120,5 +125,6 @@ public class AuthorizationServiceTest {
 
         return list;
     }
+
 
 }

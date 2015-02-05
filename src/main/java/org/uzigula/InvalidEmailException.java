@@ -8,3 +8,5 @@ public class InvalidEmailException extends Exception {
         super(message);
     }
 }
+
+
