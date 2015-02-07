@@ -1,4 +1,4 @@
-package org.uzigula;
+package org.uzigula.Basic;
 
 /**
  * Created by umamani on 02/02/2015.

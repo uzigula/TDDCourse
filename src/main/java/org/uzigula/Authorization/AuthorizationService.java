@@ -1,7 +1,6 @@
-package org.uzigula;
+package org.uzigula.Authorization;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

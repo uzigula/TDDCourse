@@ -1,4 +1,4 @@
-package org.uzigula;
+package org.uzigula.Authorization;
 
 /**
  * Created by umamani on 03/02/2015.

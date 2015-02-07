@@ -1,11 +1,11 @@
 package org.uzigula;
 
-import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.uzigula.Authorization.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,7 +89,7 @@ public class AuthorizationServiceTest {
 
 
     @Test
-    public void GetResetPasswordLink_GivenAValidEmail_SHouldSendEMailToUserInbox() throws InvalidEmailException{
+    public void GetResetPasswordLink_GivenAValidEmail_SHouldSendEMailToUserInbox() throws InvalidEmailException {
 
         when(userStoreStub.getUserFromEmail("jperez@acme.com")).thenReturn(getUser());
         auth.GetResetPasswordLink("jperez@acme.com");

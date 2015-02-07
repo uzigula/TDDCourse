@@ -2,20 +2,21 @@ package org.uzigula;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.uzigula.Loans.*;
 
 import static org.junit.Assert.*;
 
 /**
  * Created by umamani on 05/02/2015.
  */
-public class LoanSimulatorTest {
+public class SimpleLoanSimulatorTest {
 
     private LoanSimulator loanSimulator;
     private LoanRequest loanRequest;
 
     @Before
 public void setup(){
-        loanSimulator = new LoanSimulator();
+        loanSimulator = new LoanSimulator(new SimpleScheduleEngine());
         loanRequest = new LoanRequest();
 }
 @Test           //metodo_input_escenario_comportamientoesperado

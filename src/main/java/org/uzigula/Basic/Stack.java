@@ -1,4 +1,4 @@
-package org.uzigula;
+package org.uzigula.Basic;
 
         import java.io.InvalidObjectException;
         import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package org.uzigula;
+package org.uzigula.Loans;
 
 /**
  * Created by umamani on 05/02/2015.

@@ -1,4 +1,4 @@
-package org.uzigula;
+package org.uzigula.Authorization;
 
 import java.util.List;
 
